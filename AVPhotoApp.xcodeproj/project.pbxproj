@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29CB27E51CC7122900C77EE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CB27E41CC7122900C77EE5 /* main.m */; };
+		29CB27E81CC7122900C77EE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CB27E71CC7122900C77EE5 /* AppDelegate.m */; };
+		29CB27EB1CC7122900C77EE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CB27EA1CC7122900C77EE5 /* ViewController.m */; };
+		29CB27EE1CC7122900C77EE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29CB27EC1CC7122900C77EE5 /* Main.storyboard */; };
+		29CB27F01CC7122900C77EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29CB27EF1CC7122900C77EE5 /* Assets.xcassets */; };
+		29CB27F31CC7122900C77EE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29CB27F11CC7122900C77EE5 /* LaunchScreen.storyboard */; };
+		29CB27FE1CC7122900C77EE5 /* AVPhotoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CB27FD1CC7122900C77EE5 /* AVPhotoAppTests.m */; };
+		29CB28091CC7122900C77EE5 /* AVPhotoAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CB28081CC7122900C77EE5 /* AVPhotoAppUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29CB27FA1CC7122900C77EE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29CB27D81CC7122900C77EE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29CB27DF1CC7122900C77EE5;
+			remoteInfo = AVPhotoApp;
+		};
+		29CB28051CC7122900C77EE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29CB27D81CC7122900C77EE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29CB27DF1CC7122900C77EE5;
+			remoteInfo = AVPhotoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29CB27E01CC7122900C77EE5 /* AVPhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29CB27E41CC7122900C77EE5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29CB27E61CC7122900C77EE5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		29CB27E71CC7122900C77EE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		29CB27E91CC7122900C77EE5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		29CB27EA1CC7122900C77EE5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		29CB27ED1CC7122900C77EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29CB27EF1CC7122900C77EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29CB27F21CC7122900C77EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		29CB27F41CC7122900C77EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29CB27F91CC7122900C77EE5 /* AVPhotoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVPhotoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29CB27FD1CC7122900C77EE5 /* AVPhotoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPhotoAppTests.m; sourceTree = "<group>"; };
+		29CB27FF1CC7122900C77EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29CB28041CC7122900C77EE5 /* AVPhotoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVPhotoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29CB28081CC7122900C77EE5 /* AVPhotoAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPhotoAppUITests.m; sourceTree = "<group>"; };
+		29CB280A1CC7122900C77EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29CB27DD1CC7122900C77EE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CB27F61CC7122900C77EE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CB28011CC7122900C77EE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29CB27D71CC7122900C77EE5 = {
+			isa = PBXGroup;
+			children = (
+				29CB27E21CC7122900C77EE5 /* AVPhotoApp */,
+				29CB27FC1CC7122900C77EE5 /* AVPhotoAppTests */,
+				29CB28071CC7122900C77EE5 /* AVPhotoAppUITests */,
+				29CB27E11CC7122900C77EE5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29CB27E11CC7122900C77EE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29CB27E01CC7122900C77EE5 /* AVPhotoApp.app */,
+				29CB27F91CC7122900C77EE5 /* AVPhotoAppTests.xctest */,
+				29CB28041CC7122900C77EE5 /* AVPhotoAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29CB27E21CC7122900C77EE5 /* AVPhotoApp */ = {
+			isa = PBXGroup;
+			children = (
+				29CB27E61CC7122900C77EE5 /* AppDelegate.h */,
+				29CB27E71CC7122900C77EE5 /* AppDelegate.m */,
+				29CB27E91CC7122900C77EE5 /* ViewController.h */,
+				29CB27EA1CC7122900C77EE5 /* ViewController.m */,
+				29CB27EC1CC7122900C77EE5 /* Main.storyboard */,
+				29CB27EF1CC7122900C77EE5 /* Assets.xcassets */,
+				29CB27F11CC7122900C77EE5 /* LaunchScreen.storyboard */,
+				29CB27F41CC7122900C77EE5 /* Info.plist */,
+				29CB27E31CC7122900C77EE5 /* Supporting Files */,
+			);
+			path = AVPhotoApp;
+			sourceTree = "<group>";
+		};
+		29CB27E31CC7122900C77EE5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29CB27E41CC7122900C77EE5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29CB27FC1CC7122900C77EE5 /* AVPhotoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				29CB27FD1CC7122900C77EE5 /* AVPhotoAppTests.m */,
+				29CB27FF1CC7122900C77EE5 /* Info.plist */,
+			);
+			path = AVPhotoAppTests;
+			sourceTree = "<group>";
+		};
+		29CB28071CC7122900C77EE5 /* AVPhotoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				29CB28081CC7122900C77EE5 /* AVPhotoAppUITests.m */,
+				29CB280A1CC7122900C77EE5 /* Info.plist */,
+			);
+			path = AVPhotoAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29CB27DF1CC7122900C77EE5 /* AVPhotoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29CB280D1CC7122900C77EE5 /* Build configuration list for PBXNativeTarget "AVPhotoApp" */;
+			buildPhases = (
+				29CB27DC1CC7122900C77EE5 /* Sources */,
+				29CB27DD1CC7122900C77EE5 /* Frameworks */,
+				29CB27DE1CC7122900C77EE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVPhotoApp;
+			productName = AVPhotoApp;
+			productReference = 29CB27E01CC7122900C77EE5 /* AVPhotoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		29CB27F81CC7122900C77EE5 /* AVPhotoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29CB28101CC7122900C77EE5 /* Build configuration list for PBXNativeTarget "AVPhotoAppTests" */;
+			buildPhases = (
+				29CB27F51CC7122900C77EE5 /* Sources */,
+				29CB27F61CC7122900C77EE5 /* Frameworks */,
+				29CB27F71CC7122900C77EE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29CB27FB1CC7122900C77EE5 /* PBXTargetDependency */,
+			);
+			name = AVPhotoAppTests;
+			productName = AVPhotoAppTests;
+			productReference = 29CB27F91CC7122900C77EE5 /* AVPhotoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		29CB28031CC7122900C77EE5 /* AVPhotoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29CB28131CC7122900C77EE5 /* Build configuration list for PBXNativeTarget "AVPhotoAppUITests" */;
+			buildPhases = (
+				29CB28001CC7122900C77EE5 /* Sources */,
+				29CB28011CC7122900C77EE5 /* Frameworks */,
+				29CB28021CC7122900C77EE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29CB28061CC7122900C77EE5 /* PBXTargetDependency */,
+			);
+			name = AVPhotoAppUITests;
+			productName = AVPhotoAppUITests;
+			productReference = 29CB28041CC7122900C77EE5 /* AVPhotoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29CB27D81CC7122900C77EE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Ayuna Vogel";
+				TargetAttributes = {
+					29CB27DF1CC7122900C77EE5 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					29CB27F81CC7122900C77EE5 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 29CB27DF1CC7122900C77EE5;
+					};
+					29CB28031CC7122900C77EE5 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 29CB27DF1CC7122900C77EE5;
+					};
+				};
+			};
+			buildConfigurationList = 29CB27DB1CC7122900C77EE5 /* Build configuration list for PBXProject "AVPhotoApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29CB27D71CC7122900C77EE5;
+			productRefGroup = 29CB27E11CC7122900C77EE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29CB27DF1CC7122900C77EE5 /* AVPhotoApp */,
+				29CB27F81CC7122900C77EE5 /* AVPhotoAppTests */,
+				29CB28031CC7122900C77EE5 /* AVPhotoAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29CB27DE1CC7122900C77EE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CB27F31CC7122900C77EE5 /* LaunchScreen.storyboard in Resources */,
+				29CB27F01CC7122900C77EE5 /* Assets.xcassets in Resources */,
+				29CB27EE1CC7122900C77EE5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CB27F71CC7122900C77EE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CB28021CC7122900C77EE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29CB27DC1CC7122900C77EE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CB27EB1CC7122900C77EE5 /* ViewController.m in Sources */,
+				29CB27E81CC7122900C77EE5 /* AppDelegate.m in Sources */,
+				29CB27E51CC7122900C77EE5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CB27F51CC7122900C77EE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CB27FE1CC7122900C77EE5 /* AVPhotoAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CB28001CC7122900C77EE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CB28091CC7122900C77EE5 /* AVPhotoAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29CB27FB1CC7122900C77EE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29CB27DF1CC7122900C77EE5 /* AVPhotoApp */;
+			targetProxy = 29CB27FA1CC7122900C77EE5 /* PBXContainerItemProxy */;
+		};
+		29CB28061CC7122900C77EE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29CB27DF1CC7122900C77EE5 /* AVPhotoApp */;
+			targetProxy = 29CB28051CC7122900C77EE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		29CB27EC1CC7122900C77EE5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29CB27ED1CC7122900C77EE5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		29CB27F11CC7122900C77EE5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29CB27F21CC7122900C77EE5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29CB280B1CC7122900C77EE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		29CB280C1CC7122900C77EE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29CB280E1CC7122900C77EE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AVPhotoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayunavogel.AVPhotoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		29CB280F1CC7122900C77EE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AVPhotoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayunavogel.AVPhotoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		29CB28111CC7122900C77EE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AVPhotoAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayunavogel.AVPhotoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AVPhotoApp.app/AVPhotoApp";
+			};
+			name = Debug;
+		};
+		29CB28121CC7122900C77EE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AVPhotoAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayunavogel.AVPhotoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AVPhotoApp.app/AVPhotoApp";
+			};
+			name = Release;
+		};
+		29CB28141CC7122900C77EE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AVPhotoAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayunavogel.AVPhotoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AVPhotoApp;
+			};
+			name = Debug;
+		};
+		29CB28151CC7122900C77EE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AVPhotoAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ayunavogel.AVPhotoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AVPhotoApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29CB27DB1CC7122900C77EE5 /* Build configuration list for PBXProject "AVPhotoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29CB280B1CC7122900C77EE5 /* Debug */,
+				29CB280C1CC7122900C77EE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29CB280D1CC7122900C77EE5 /* Build configuration list for PBXNativeTarget "AVPhotoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29CB280E1CC7122900C77EE5 /* Debug */,
+				29CB280F1CC7122900C77EE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		29CB28101CC7122900C77EE5 /* Build configuration list for PBXNativeTarget "AVPhotoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29CB28111CC7122900C77EE5 /* Debug */,
+				29CB28121CC7122900C77EE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		29CB28131CC7122900C77EE5 /* Build configuration list for PBXNativeTarget "AVPhotoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29CB28141CC7122900C77EE5 /* Debug */,
+				29CB28151CC7122900C77EE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29CB27D81CC7122900C77EE5 /* Project object */;
+}
