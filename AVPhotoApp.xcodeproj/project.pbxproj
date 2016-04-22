@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04DACC419441D3C504915E08 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 730CC34A8A7195975E48D11F /* libPods.a */; };
+		296BF80E1CC9342F007B68BF /* AVHomepageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BF80D1CC9342F007B68BF /* AVHomepageCollectionViewController.m */; };
+		296BF8111CC93454007B68BF /* AVGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BF8101CC93454007B68BF /* AVGalleryViewController.m */; };
+		296BF8141CC934E6007B68BF /* AVPhotoImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BF8131CC934E6007B68BF /* AVPhotoImage.m */; };
+		296BF8191CC93729007B68BF /* AVHomepageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BF8181CC93729007B68BF /* AVHomepageCollectionViewCell.m */; };
+		296BF81D1CC9ADC1007B68BF /* AVAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BF81C1CC9ADC1007B68BF /* AVAPIManager.m */; };
 		29CB27E51CC7122900C77EE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CB27E41CC7122900C77EE5 /* main.m */; };
 		29CB27E81CC7122900C77EE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CB27E71CC7122900C77EE5 /* AppDelegate.m */; };
-		29CB27EB1CC7122900C77EE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CB27EA1CC7122900C77EE5 /* ViewController.m */; };
 		29CB27EE1CC7122900C77EE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29CB27EC1CC7122900C77EE5 /* Main.storyboard */; };
 		29CB27F01CC7122900C77EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29CB27EF1CC7122900C77EE5 /* Assets.xcassets */; };
 		29CB27F31CC7122900C77EE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29CB27F11CC7122900C77EE5 /* LaunchScreen.storyboard */; };
@@ -35,12 +40,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		296BF80C1CC9342F007B68BF /* AVHomepageCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHomepageCollectionViewController.h; sourceTree = "<group>"; };
+		296BF80D1CC9342F007B68BF /* AVHomepageCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHomepageCollectionViewController.m; sourceTree = "<group>"; };
+		296BF80F1CC93454007B68BF /* AVGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVGalleryViewController.h; sourceTree = "<group>"; };
+		296BF8101CC93454007B68BF /* AVGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVGalleryViewController.m; sourceTree = "<group>"; };
+		296BF8121CC934E6007B68BF /* AVPhotoImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPhotoImage.h; sourceTree = "<group>"; };
+		296BF8131CC934E6007B68BF /* AVPhotoImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPhotoImage.m; sourceTree = "<group>"; };
+		296BF8171CC93729007B68BF /* AVHomepageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHomepageCollectionViewCell.h; sourceTree = "<group>"; };
+		296BF8181CC93729007B68BF /* AVHomepageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHomepageCollectionViewCell.m; sourceTree = "<group>"; };
+		296BF81B1CC9ADC1007B68BF /* AVAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAPIManager.h; sourceTree = "<group>"; };
+		296BF81C1CC9ADC1007B68BF /* AVAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAPIManager.m; sourceTree = "<group>"; };
 		29CB27E01CC7122900C77EE5 /* AVPhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29CB27E41CC7122900C77EE5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29CB27E61CC7122900C77EE5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		29CB27E71CC7122900C77EE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		29CB27E91CC7122900C77EE5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		29CB27EA1CC7122900C77EE5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		29CB27ED1CC7122900C77EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29CB27EF1CC7122900C77EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29CB27F21CC7122900C77EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +64,9 @@
 		29CB28041CC7122900C77EE5 /* AVPhotoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVPhotoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29CB28081CC7122900C77EE5 /* AVPhotoAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPhotoAppUITests.m; sourceTree = "<group>"; };
 		29CB280A1CC7122900C77EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		730CC34A8A7195975E48D11F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		86019F6C1F7C532D1CA3552C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C92E48055B8EE55997B5EB43 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DACC419441D3C504915E08 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +95,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		296BF8151CC93557007B68BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				296BF8121CC934E6007B68BF /* AVPhotoImage.h */,
+				296BF8131CC934E6007B68BF /* AVPhotoImage.m */,
+				296BF81B1CC9ADC1007B68BF /* AVAPIManager.h */,
+				296BF81C1CC9ADC1007B68BF /* AVAPIManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		296BF8161CC93560007B68BF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				296BF80C1CC9342F007B68BF /* AVHomepageCollectionViewController.h */,
+				296BF80D1CC9342F007B68BF /* AVHomepageCollectionViewController.m */,
+				296BF80F1CC93454007B68BF /* AVGalleryViewController.h */,
+				296BF8101CC93454007B68BF /* AVGalleryViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		296BF81A1CC93732007B68BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				296BF8171CC93729007B68BF /* AVHomepageCollectionViewCell.h */,
+				296BF8181CC93729007B68BF /* AVHomepageCollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		29CB27D71CC7122900C77EE5 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +133,8 @@
 				29CB27FC1CC7122900C77EE5 /* AVPhotoAppTests */,
 				29CB28071CC7122900C77EE5 /* AVPhotoAppUITests */,
 				29CB27E11CC7122900C77EE5 /* Products */,
+				8DE1C727B110662ED96A5936 /* Pods */,
+				C05071ABC951401E83BEE9E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,8 +153,9 @@
 			children = (
 				29CB27E61CC7122900C77EE5 /* AppDelegate.h */,
 				29CB27E71CC7122900C77EE5 /* AppDelegate.m */,
-				29CB27E91CC7122900C77EE5 /* ViewController.h */,
-				29CB27EA1CC7122900C77EE5 /* ViewController.m */,
+				296BF8151CC93557007B68BF /* Model */,
+				296BF81A1CC93732007B68BF /* Views */,
+				296BF8161CC93560007B68BF /* Controllers */,
 				29CB27EC1CC7122900C77EE5 /* Main.storyboard */,
 				29CB27EF1CC7122900C77EE5 /* Assets.xcassets */,
 				29CB27F11CC7122900C77EE5 /* LaunchScreen.storyboard */,
@@ -140,6 +191,23 @@
 			path = AVPhotoAppUITests;
 			sourceTree = "<group>";
 		};
+		8DE1C727B110662ED96A5936 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C92E48055B8EE55997B5EB43 /* Pods.debug.xcconfig */,
+				86019F6C1F7C532D1CA3552C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C05071ABC951401E83BEE9E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				730CC34A8A7195975E48D11F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29CB280D1CC7122900C77EE5 /* Build configuration list for PBXNativeTarget "AVPhotoApp" */;
 			buildPhases = (
+				15C8C35308EE446D879C11E9 /* Check Pods Manifest.lock */,
 				29CB27DC1CC7122900C77EE5 /* Sources */,
 				29CB27DD1CC7122900C77EE5 /* Frameworks */,
 				29CB27DE1CC7122900C77EE5 /* Resources */,
+				EF07C45C0286121BD58A8ED9 /* Embed Pods Frameworks */,
+				71989933EF09B252B02D4FF3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,14 +336,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15C8C35308EE446D879C11E9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		71989933EF09B252B02D4FF3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF07C45C0286121BD58A8ED9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		29CB27DC1CC7122900C77EE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29CB27EB1CC7122900C77EE5 /* ViewController.m in Sources */,
+				296BF81D1CC9ADC1007B68BF /* AVAPIManager.m in Sources */,
 				29CB27E81CC7122900C77EE5 /* AppDelegate.m in Sources */,
+				296BF8141CC934E6007B68BF /* AVPhotoImage.m in Sources */,
 				29CB27E51CC7122900C77EE5 /* main.m in Sources */,
+				296BF8111CC93454007B68BF /* AVGalleryViewController.m in Sources */,
+				296BF80E1CC9342F007B68BF /* AVHomepageCollectionViewController.m in Sources */,
+				296BF8191CC93729007B68BF /* AVHomepageCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +534,7 @@
 		};
 		29CB280E1CC7122900C77EE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C92E48055B8EE55997B5EB43 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AVPhotoApp/Info.plist;
@@ -422,6 +546,7 @@
 		};
 		29CB280F1CC7122900C77EE5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86019F6C1F7C532D1CA3552C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AVPhotoApp/Info.plist;
@@ -496,6 +621,7 @@
 				29CB280F1CC7122900C77EE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29CB28101CC7122900C77EE5 /* Build configuration list for PBXNativeTarget "AVPhotoAppTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +630,7 @@
 				29CB28121CC7122900C77EE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29CB28131CC7122900C77EE5 /* Build configuration list for PBXNativeTarget "AVPhotoAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +639,7 @@
 				29CB28151CC7122900C77EE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
