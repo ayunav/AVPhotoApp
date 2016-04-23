@@ -12,7 +12,7 @@
 
 @interface AVPhotoStore : NSObject
 
-+ (AVPhotoStore *)sharedInstance;
-- (AVPhoto *)getPhotoAtIndex:(int)index;
++ (AVPhotoStore *)sharedPhotoStore;
+//- (AVPhoto *)getPhotoAtIndex:(int)index;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AVHomepageCollectionViewController.h"
+#import "AVPhotoStore.h"
 
 @interface AVHomepageCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate,  UICollectionViewDelegateFlowLayout>
 
@@ -15,34 +16,32 @@
 
 @implementation AVHomepageCollectionViewController
 
-static NSString * const reuseIdentifier = @"AVHomepageCollectionViewCell";
+static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
-    
  
-    //[self setupUI];
-    [self fetchAPIData];
+//    [self fetchAPIData];
 
 }
 
-- (void)fetchAPIData {
- 
-
-    self.photos = [[NSArray alloc] init];
-    
-    [AVAPIManager getPhotoImageData:^(id response, NSError *error) {
-        
-        self.photos = response;
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.collectionView reloadData];
-        });
-    }];
-}
+//- (void)fetchAPIData {
+// 
+//
+//    self.photos = [[NSArray alloc] init];
+//    
+//    [AVAPIManager getPhotoImageData:^(id response, NSError *error) {
+//        
+//        self.photos = response;
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self.collectionView reloadData];
+//        });
+//    }];
+//}
 
 
 - (void)didReceiveMemoryWarning {

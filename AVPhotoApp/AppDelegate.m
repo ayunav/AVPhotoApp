@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [AVPhotoStore sharedInstance];
+    [AVPhotoStore sharedPhotoStore];
 
     return YES;
 }

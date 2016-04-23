@@ -20,16 +20,16 @@
 @implementation AVPhotoStore
 
 
-+ (AVPhotoStore *)sharedInstance {
-
-    static AVPhotoStore *sharedInstance = nil;
++ (AVPhotoStore *)sharedPhotoStore {
+    
+    static AVPhotoStore *sharedPhotoStore = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[AVPhotoStore alloc] init];
+        sharedPhotoStore = [[AVPhotoStore alloc] init];
     });
-    return sharedInstance;
-    
+    return sharedPhotoStore;
+
 }
 
 
@@ -65,12 +65,12 @@
 }
 
 
-- (AVPhoto *)getPhotoAtIndex:(int)index {
-    
-    // get from photos array
-    AVPhoto * v;
-    return v;
-}
+//- (AVPhoto *)getPhotoAtIndex:(int)index {
+//    
+//    // get from photos array
+//    AVPhoto * v;
+//    return v;
+//}
 
 
 @end
