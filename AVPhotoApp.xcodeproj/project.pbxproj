@@ -101,12 +101,12 @@
 		296BF8151CC93557007B68BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				29D2D8CC1CCAE93000549653 /* AVPhotoStore.h */,
-				29D2D8CD1CCAE93000549653 /* AVPhotoStore.m */,
 				296BF8121CC934E6007B68BF /* AVPhoto.h */,
 				296BF8131CC934E6007B68BF /* AVPhoto.m */,
 				296BF81B1CC9ADC1007B68BF /* AVAPIManager.h */,
 				296BF81C1CC9ADC1007B68BF /* AVAPIManager.m */,
+				29D2D8CC1CCAE93000549653 /* AVPhotoStore.h */,
+				29D2D8CD1CCAE93000549653 /* AVPhotoStore.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";

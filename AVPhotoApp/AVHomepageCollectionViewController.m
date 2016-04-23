@@ -11,6 +11,9 @@
 
 @interface AVHomepageCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate,  UICollectionViewDelegateFlowLayout>
 
+// strong? copy?
+@property (nonatomic, copy) NSMutableArray *photos;
+
 @end
 
 
@@ -24,8 +27,15 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
  
-//    [self fetchAPIData];
-
+    //    [self fetchAPIData]; // this works just for pulling data into the VC from the API link
+    
+    AVPhotoStore *photoStore = [AVPhotoStore sharedPhotoStore];
+    [photoStore fetchAndParseApiData:self.photos];
+    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.collectionView reloadData];
+//    });
+    
 }
 
 //- (void)fetchAPIData {
@@ -65,9 +75,12 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
     
     AVHomepageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    NSDictionary *apiImageObject = self.photos[indexPath.row];
     
-    [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:apiImageObject[@"imageURL"]]
+    AVPhoto *photo = self.photos[indexPath.row];
+    
+//    NSDictionary *apiImageObject = self.photos[indexPath.row];
+    
+    [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:photo.imageURL]
                                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                       
                                       cell.photoImageView.image = image;

@@ -13,6 +13,8 @@
 @interface AVPhotoStore : NSObject
 
 + (AVPhotoStore *)sharedPhotoStore;
+- (void)fetchAndParseApiData:(NSMutableArray *)data;
+
 //- (AVPhoto *)getPhotoAtIndex:(int)index;
 
 @end

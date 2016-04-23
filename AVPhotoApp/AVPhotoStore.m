@@ -12,7 +12,7 @@
 
 @interface AVPhotoStore()
 
-@property (nonatomic, strong) NSMutableArray *photos;
+//@property (nonatomic, strong) NSMutableArray *photos;
 
 @end
 
@@ -33,16 +33,11 @@
 }
 
 
-- (void)setup {
-
-    self.photos = [[NSMutableArray alloc] init];
-
-    [self fetchAndParseApiData];
-}
-
-
-- (void)fetchAndParseApiData {
+- (void)fetchAndParseApiData:(NSMutableArray *)data {
     
+    
+//    self.photos = [[NSMutableArray alloc] init];
+
     [AVAPIManager getPhotoImageData:^(id response, NSError *error) {
         
         for (NSDictionary *dict in response) {
@@ -56,8 +51,9 @@
             photo.imageName = imageName;
             photo.imageDescription = imageDescription;
             photo.imageURL = imageURL;
-            
-            [self.photos addObject:photo];
+
+            [data addObject:photo];
+//            [self.photos addObject:photo];
         }
    
     }];

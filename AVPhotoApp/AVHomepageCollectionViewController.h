@@ -17,7 +17,4 @@
 
 @interface AVHomepageCollectionViewController : UICollectionViewController
 
-// strong? copy? 
-@property (nonatomic, copy) NSArray *photos; //an array of dictionaries
-
 @end
