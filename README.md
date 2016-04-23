@@ -18,7 +18,7 @@ Image View
 * Every two seconds the view should progress to the next image in the list. 
 * After the last image is displayed, starting over with the first image in the list. 
 Navigation Bar
-* Back arrow button to return back to the Homepage.  
+* V ~~Back arrow button to return back to the Homepage.~~
 * Displays image’s position in the list (i.e., “5/16”). 
 * Includes a button that removes an image from the list. 
 
