@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AVPhotoImage.h"
+#import "AVPhoto.h"
 #import "AVHomepageCollectionViewController.h"
 
 
 @interface AVAPIManager : NSObject
 
-+ (void)getPhotoImageData:(void(^)(id response, NSError *error))handler;
++ (void)getPhotoImageData:(void(^)(id response, NSError *error))completionHandler;
 
 @end

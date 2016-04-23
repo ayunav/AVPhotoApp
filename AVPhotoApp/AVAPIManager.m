@@ -14,7 +14,7 @@
 
 @implementation AVAPIManager
 
-+ (void)getPhotoImageData:(void(^)(id response, NSError *error))handler {
++ (void)getPhotoImageData:(void(^)(id response, NSError *error))completionHandler {
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
@@ -22,8 +22,8 @@
       parameters:nil
         progress:nil
          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-         
-             handler(responseObject, nil);
+          
+             completionHandler(responseObject, nil);
          
          } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
          

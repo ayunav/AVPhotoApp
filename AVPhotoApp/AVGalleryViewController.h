@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AVPhoto.h"
+
 @interface AVGalleryViewController : UIViewController
+
+@property (nonatomic) AVPhoto *photoImage; 
 
 @end

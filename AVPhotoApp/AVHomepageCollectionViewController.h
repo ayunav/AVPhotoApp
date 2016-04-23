@@ -10,9 +10,10 @@
 #import <AFNetworking/AFNetworking.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
-#import "AVPhotoImage.h"
-#import "AVHomepageCollectionViewCell.h"
+#import "AVPhoto.h"
 #import "AVAPIManager.h"
+#import "AVHomepageCollectionViewCell.h"
+#import "AVGalleryViewController.h"
 
 @interface AVHomepageCollectionViewController : UICollectionViewController
 

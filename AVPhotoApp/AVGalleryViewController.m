@@ -10,6 +10,8 @@
 
 @interface AVGalleryViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+
 @end
 
 @implementation AVGalleryViewController

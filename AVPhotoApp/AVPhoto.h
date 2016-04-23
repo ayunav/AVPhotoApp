@@ -1,5 +1,5 @@
 //
-//  AVPhotoImage.h
+//  AVPhoto.h
 //  AVPhotoApp
 //
 //  Created by Ayuna Vogel on 4/21/16.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AVPhotoImage : NSObject
+@interface AVPhoto : NSObject
 
 @property (nonatomic, strong) NSString *imageURL;
 @property (nonatomic, strong) NSString *imageDescription;

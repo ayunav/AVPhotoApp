@@ -29,6 +29,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="su1-MJ-f9E">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cgy-8Z-mne">
                             <size key="itemSize" width="183" height="183"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -44,41 +45,31 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zd1-3J-msf">
-                                            <rect key="frame" x="8" y="8" width="167" height="127"/>
+                                            <rect key="frame" x="8" y="8" width="175" height="175"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="175" id="WPG-TD-xd6"/>
-                                                <constraint firstAttribute="width" constant="175" id="g2w-TG-mw7"/>
-                                                <constraint firstAttribute="height" constant="127" id="mkH-Ao-YAx"/>
+                                                <constraint firstAttribute="width" constant="175" id="A3w-lF-JNS"/>
+                                                <constraint firstAttribute="height" constant="175" id="zCO-FR-2BF"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="WPG-TD-xd6"/>
-                                                    <exclude reference="g2w-TG-mw7"/>
+                                                    <exclude reference="A3w-lF-JNS"/>
+                                                    <exclude reference="zCO-FR-2BF"/>
                                                 </mask>
                                             </variation>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckz-2g-1f5">
-                                            <rect key="frame" x="70" y="148" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="zd1-3J-msf" firstAttribute="centerX" secondItem="Ckz-2g-1f5" secondAttribute="centerX" id="7WX-7w-udP"/>
-                                    <constraint firstItem="zd1-3J-msf" firstAttribute="trailing" secondItem="HM3-d2-tpv" secondAttribute="trailingMargin" id="GIT-M9-8uQ"/>
-                                    <constraint firstItem="zd1-3J-msf" firstAttribute="leading" secondItem="HM3-d2-tpv" secondAttribute="leadingMargin" id="OHO-Kf-7WQ"/>
-                                    <constraint firstItem="Ckz-2g-1f5" firstAttribute="top" secondItem="zd1-3J-msf" secondAttribute="bottom" constant="13" id="QXA-fC-qPV"/>
-                                    <constraint firstItem="zd1-3J-msf" firstAttribute="top" secondItem="HM3-d2-tpv" secondAttribute="topMargin" id="oUQ-1J-Gak"/>
+                                    <constraint firstItem="zd1-3J-msf" firstAttribute="leading" secondItem="HM3-d2-tpv" secondAttribute="leading" constant="8" id="GxE-96-XUr"/>
+                                    <constraint firstItem="zd1-3J-msf" firstAttribute="top" secondItem="HM3-d2-tpv" secondAttribute="top" constant="8" id="XzN-wY-rT8"/>
+                                    <constraint firstAttribute="trailing" secondItem="zd1-3J-msf" secondAttribute="trailing" id="lt0-P5-ikI"/>
+                                    <constraint firstAttribute="bottom" secondItem="zd1-3J-msf" secondAttribute="bottom" id="svq-wJ-j77"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="imageName" destination="Ckz-2g-1f5" id="cuq-HO-1au"/>
                                     <outlet property="photoImageView" destination="zd1-3J-msf" id="Bcd-y9-mbc"/>
-                                    <segue destination="A08-NR-x9G" kind="show" id="axM-07-Epr"/>
+                                    <segue destination="A08-NR-x9G" kind="show" identifier="GalleryViewSegueIdentifier" id="axM-07-Epr"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -105,13 +96,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMc-qZ-GWh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pMc-qZ-GWh">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z29-TG-54Z" firstAttribute="top" secondItem="pMc-qZ-GWh" secondAttribute="bottom" id="LDM-GW-g1P"/>
+                            <constraint firstItem="pMc-qZ-GWh" firstAttribute="leading" secondItem="4EJ-WM-DOJ" secondAttribute="leadingMargin" constant="-20" id="U3g-vC-Msp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pMc-qZ-GWh" secondAttribute="trailing" constant="-20" id="WWG-BE-mFf"/>
+                            <constraint firstItem="pMc-qZ-GWh" firstAttribute="top" secondItem="Mcb-l2-h44" secondAttribute="bottom" id="yJe-Iv-DQ0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nbP-cH-VJN"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="pMc-qZ-GWh" id="vkW-ge-pEn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjf-Fv-T2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
