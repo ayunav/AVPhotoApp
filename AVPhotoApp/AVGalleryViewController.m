@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.photoImageView.clipsToBounds = YES;
+
     [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.photo.imageURL]
                                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                       

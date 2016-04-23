@@ -27,8 +27,6 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
  
-    //    [self fetchAPIData]; // this works just for pulling data into the VC from the API link
-    
     AVPhotoStore *photoStore = [AVPhotoStore sharedPhotoStore];
     [photoStore fetchAndParseApiData:^(NSMutableArray<AVPhoto *> *photos) {
         self.photos = photos;
