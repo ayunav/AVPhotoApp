@@ -1,5 +1,5 @@
 //
-//  DAO.h
+//  AVPhotoStore.h
 //  AVPhotoApp
 //
 //  Created by Ayuna Vogel on 4/22/16.
@@ -10,9 +10,9 @@
 
 #import "AVPhoto.h"
 
-@interface DAO : NSObject
+@interface AVPhotoStore : NSObject
 
-+ (DAO *)sharedInstance;
++ (AVPhotoStore *)sharedInstance;
 - (AVPhoto *)getPhotoAtIndex:(int)index;
 
 @end

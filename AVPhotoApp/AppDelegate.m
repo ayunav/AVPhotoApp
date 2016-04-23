@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "DAO.h"
+#import "AVPhotoStore.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [DAO sharedInstance];
+    [AVPhotoStore sharedInstance];
 
     return YES;
 }

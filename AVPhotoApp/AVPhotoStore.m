@@ -1,32 +1,32 @@
 //
-//  DAO.m
+//  AVPhotoStore.m
 //  AVPhotoApp
 //
 //  Created by Ayuna Vogel on 4/22/16.
 //  Copyright © 2016 Ayuna Vogel. All rights reserved.
 //
 
-#import "DAO.h"
+#import "AVPhotoStore.h"
 #import "AVAPIManager.h"
 
 
-@interface DAO()
+@interface AVPhotoStore()
 
 @property (nonatomic, strong) NSMutableArray *photos;
 
 @end
 
 
-@implementation DAO
+@implementation AVPhotoStore
 
 
-+ (DAO *)sharedInstance {
++ (AVPhotoStore *)sharedInstance {
 
-    static DAO *sharedInstance = nil;
+    static AVPhotoStore *sharedInstance = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[DAO alloc] init];
+        sharedInstance = [[AVPhotoStore alloc] init];
     });
     return sharedInstance;
     
