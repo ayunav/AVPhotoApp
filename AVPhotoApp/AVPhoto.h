@@ -10,8 +10,8 @@
 
 @interface AVPhoto : NSObject
 
-@property (nonatomic, strong) NSString *imageURL;
-@property (nonatomic, strong) NSString *imageDescription;
 @property (nonatomic, strong) NSString *imageName;
+@property (nonatomic, strong) NSString *imageDescription;
+@property (nonatomic, strong) NSString *imageURL;
 
 @end

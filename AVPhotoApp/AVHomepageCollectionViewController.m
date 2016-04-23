@@ -8,7 +8,7 @@
 
 #import "AVHomepageCollectionViewController.h"
 
-@interface AVHomepageCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface AVHomepageCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate,  UICollectionViewDelegateFlowLayout>
 
 @end
 
@@ -23,99 +23,32 @@ static NSString * const reuseIdentifier = @"AVHomepageCollectionViewCell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Register cell classes
-    //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-
-    [self setupUI];
+ 
+    //[self setupUI];
     [self fetchAPIData];
 
 }
 
 - (void)fetchAPIData {
  
-    AVPhoto *photoImageObject = [[AVPhoto alloc]init];
 
-    self.photoImageObjects = [[NSArray alloc] init];
+    self.photos = [[NSArray alloc] init];
     
     [AVAPIManager getPhotoImageData:^(id response, NSError *error) {
         
-        self.photoImageObjects = response;
+        self.photos = response;
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
         });
-        
-        
-        
-        //        photoImageObject.imageURL = self.photoImageObjects[@"imageURL"];
-        //        photoImageObject.imageURL = self.photoImageObjects[@"imageURL"];
-        //        photoImageObject.imageURL = self.photoImageObjects[@"imageURL"];
     }];
 }
-
-
-- (void)setupUI {
-    
-    CGFloat leftAndRightPaddings = 6.0;
-    CGFloat numberOfItemsPerRow = 3.0;
-    
-    CGFloat heightAdjustment = 30.0;
-    CGFloat width = (CGRectGetWidth(self.collectionView.frame) - leftAndRightPaddings)/numberOfItemsPerRow;
-    
-    
-    // Configure layout
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(width, width + heightAdjustment);
-
-//    [flowLayout setItemSize:CGSizeMake(200, 200)];
-//    [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    [self.collectionView setCollectionViewLayout:flowLayout];
-    
-    
-   }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-//- (void)fetchImageData {
-//    
-//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    
-//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-//    
-//    [manager GET:HomeworkURL
-//      parameters:nil
-//        progress:nil
-//         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//             
-//             NSError *error;
-//             
-//             NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
-//             
-//             NSString *imageURL = [jsonDict objectForKey:@"imageURL"];
-//             
-//             
-//             dispatch_async(dispatch_get_global_queue(0,0), ^{
-//                 NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageURL]];
-//                 if ( data == nil )
-//                     return;
-//                 dispatch_async(dispatch_get_main_queue(), ^{
-//                     // self.catImageView.image = [UIImage imageWithData:data];
-//                     
-//                 });
-//             });
-//             
-//         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//             NSLog(@"fail:%@", error);
-//         }];
-//    
-//    
-//}
 
 
 #pragma mark <UICollectionViewDataSource>
@@ -126,45 +59,60 @@ static NSString * const reuseIdentifier = @"AVHomepageCollectionViewCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.photoImageObjects.count;
+    return self.photos.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     AVHomepageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    NSDictionary *photoImageObject = self.photoImageObjects[indexPath.row];
-    cell.imageName.text = photoImageObject[@"imageDescription"];
+    NSDictionary *apiImageObject = self.photos[indexPath.row];
     
-    [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:photoImageObject[@"imageURL"]]
+    [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:apiImageObject[@"imageURL"]]
                                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                       
                                       cell.photoImageView.image = image;
                                       
-                                      
                                   }];
 
-//    AVPhoto *photoImage = self.photoImageObjects[indexPath.row];
-
-    
-    
-//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-   
     // ?
     cell.layer.masksToBounds = YES;
     
     return cell;
 }
 
+#pragma mark CollectionView Layout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout*)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CGFloat picDimension = self.view.frame.size.width / 3.0f;
+    return CGSizeMake(picDimension, picDimension);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView
+                        layout:(UICollectionViewLayout*)collectionViewLayout
+        insetForSectionAtIndex:(NSInteger)section {
+
+    CGFloat leftRightInset = self.view.frame.size.width / 14.0f;
+    return UIEdgeInsetsMake(0, leftRightInset, 0, leftRightInset);
+}
+
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"GalleryViewSegueIdentifier"]) {
+        
         AVGalleryViewController *galleryVC = segue.destinationViewController;
+        
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:sender];
-        AVPhoto *photoImageObject = [self.photoImageObjects objectAtIndex:indexPath.row];
-        galleryVC.photoImage = photoImageObject;
+        
+        AVPhoto *photo = [self.photos objectAtIndex:indexPath.row];
+        
+        galleryVC.photo = photo;
     }
     
 }

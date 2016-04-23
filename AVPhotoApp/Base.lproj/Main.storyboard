@@ -38,25 +38,15 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="AVHomepageCollectionViewCell" reuseIdentifier="AVHomepageCollectionViewCell" id="HM3-d2-tpv" customClass="AVHomepageCollectionViewCell">
-                                <rect key="frame" x="0.0" y="64" width="183" height="183"/>
+                                <rect key="frame" x="150" y="64" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="183" height="183"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zd1-3J-msf">
-                                            <rect key="frame" x="8" y="8" width="175" height="175"/>
+                                            <rect key="frame" x="8" y="8" width="284" height="284"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="175" id="A3w-lF-JNS"/>
-                                                <constraint firstAttribute="height" constant="175" id="zCO-FR-2BF"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="A3w-lF-JNS"/>
-                                                    <exclude reference="zCO-FR-2BF"/>
-                                                </mask>
-                                            </variation>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -64,9 +54,10 @@
                                 <constraints>
                                     <constraint firstItem="zd1-3J-msf" firstAttribute="leading" secondItem="HM3-d2-tpv" secondAttribute="leading" constant="8" id="GxE-96-XUr"/>
                                     <constraint firstItem="zd1-3J-msf" firstAttribute="top" secondItem="HM3-d2-tpv" secondAttribute="top" constant="8" id="XzN-wY-rT8"/>
-                                    <constraint firstAttribute="trailing" secondItem="zd1-3J-msf" secondAttribute="trailing" id="lt0-P5-ikI"/>
-                                    <constraint firstAttribute="bottom" secondItem="zd1-3J-msf" secondAttribute="bottom" id="svq-wJ-j77"/>
+                                    <constraint firstAttribute="trailing" secondItem="zd1-3J-msf" secondAttribute="trailing" constant="8" id="lt0-P5-ikI"/>
+                                    <constraint firstAttribute="bottom" secondItem="zd1-3J-msf" secondAttribute="bottom" constant="8" id="svq-wJ-j77"/>
                                 </constraints>
+                                <size key="customSize" width="300" height="300"/>
                                 <connections>
                                     <outlet property="photoImageView" destination="zd1-3J-msf" id="Bcd-y9-mbc"/>
                                     <segue destination="A08-NR-x9G" kind="show" identifier="GalleryViewSegueIdentifier" id="axM-07-Epr"/>

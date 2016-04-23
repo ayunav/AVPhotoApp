@@ -12,6 +12,7 @@
 
 #define HomeworkURL @"https://hinge-homework.s3.amazonaws.com/client/services/homework.json"
 
+
 @implementation AVAPIManager
 
 + (void)getPhotoImageData:(void(^)(id response, NSError *error))completionHandler {

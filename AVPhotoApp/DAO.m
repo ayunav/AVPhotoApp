@@ -20,7 +20,7 @@
 @implementation DAO
 
 
-+ (DAO*)sharedInstance {
++ (DAO *)sharedInstance {
 
     static DAO *sharedInstance = nil;
     
@@ -37,39 +37,31 @@
 
     self.photos = [[NSMutableArray alloc] init];
 
+    [self fetchAndParseApiData];
 }
 
 
-- (void)fetchAndParseApiData:(NSArray *)data {
-    
-    AVPhoto *photo = [[AVPhoto alloc]init];
-    
+- (void)fetchAndParseApiData {
     
     [AVAPIManager getPhotoImageData:^(id response, NSError *error) {
         
-        
-        for (NSDictionary *dict in data) {
-            // parse
-            AVPhoto * image = [[AVPhoto alloc] init];
+        for (NSDictionary *dict in response) {
+           
+            AVPhoto *photo = [[AVPhoto alloc] init];
             
-            //
-            //
-            //
+            NSString *imageName = dict[@"imageName"];
+            NSString *imageDescription = dict[@"imageDescription"];
+            NSString *imageURL = dict[@"imageURL"];
             
-            [self.photos addObject:image];
+            photo.imageName = imageName;
+            photo.imageDescription = imageDescription;
+            photo.imageURL = imageURL;
+            
+            [self.photos addObject:photo];
         }
    
-        
-        
-        
-        //        photoImageObject.imageURL = self.photoImageObjects[@"imageURL"];
-        //        photoImageObject.imageURL = self.photoImageObjects[@"imageURL"];
-        //        photoImageObject.imageURL = self.photoImageObjects[@"imageURL"];
     }];
-    
-    
-
-    
+   
 }
 
 
