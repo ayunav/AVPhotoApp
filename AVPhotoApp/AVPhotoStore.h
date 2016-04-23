@@ -12,8 +12,12 @@
 
 @interface AVPhotoStore : NSObject
 
+// >>>
+#define DATA [AVPhotoStore sharedPhotoStore]
+
 + (AVPhotoStore *)sharedPhotoStore;
-- (void)fetchAndParseApiData:(NSMutableArray *)data;
+
+- (void)fetchAndParseApiData:(void (^)(NSMutableArray<AVPhoto *> *photos))completion;
 
 //- (AVPhoto *)getPhotoAtIndex:(int)index;
 

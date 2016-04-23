@@ -9,16 +9,14 @@
 #import "AVPhotoStore.h"
 #import "AVAPIManager.h"
 
-
 @interface AVPhotoStore()
 
-//@property (nonatomic, strong) NSMutableArray *photos;
+@property (nonatomic, strong) NSMutableArray *photos;
 
 @end
 
 
 @implementation AVPhotoStore
-
 
 + (AVPhotoStore *)sharedPhotoStore {
     
@@ -32,11 +30,9 @@
 
 }
 
-
-- (void)fetchAndParseApiData:(NSMutableArray *)data {
+- (void)fetchAndParseApiData:(void (^)(NSMutableArray<AVPhoto *> *photos))completion {
     
-    
-//    self.photos = [[NSMutableArray alloc] init];
+    self.photos = [[NSMutableArray alloc] init];
 
     [AVAPIManager getPhotoImageData:^(id response, NSError *error) {
         
@@ -52,9 +48,10 @@
             photo.imageDescription = imageDescription;
             photo.imageURL = imageURL;
 
-            [data addObject:photo];
-//            [self.photos addObject:photo];
+            [self.photos addObject:photo];
         }
+        
+        completion(self.photos);
    
     }];
    

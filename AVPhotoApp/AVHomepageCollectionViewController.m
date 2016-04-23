@@ -30,28 +30,16 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
     //    [self fetchAPIData]; // this works just for pulling data into the VC from the API link
     
     AVPhotoStore *photoStore = [AVPhotoStore sharedPhotoStore];
-    [photoStore fetchAndParseApiData:self.photos];
-    
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [self.collectionView reloadData];
-//    });
-    
-}
+    [photoStore fetchAndParseApiData:^(NSMutableArray<AVPhoto *> *photos) {
+        self.photos = photos;
 
-//- (void)fetchAPIData {
-// 
-//
-//    self.photos = [[NSArray alloc] init];
-//    
-//    [AVAPIManager getPhotoImageData:^(id response, NSError *error) {
-//        
-//        self.photos = response;
-//        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self.collectionView reloadData];
-//        });
-//    }];
-//}
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView reloadData];
+        });
+
+    }];
+
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -75,10 +63,7 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
     
     AVHomepageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    
     AVPhoto *photo = self.photos[indexPath.row];
-    
-//    NSDictionary *apiImageObject = self.photos[indexPath.row];
     
     [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:photo.imageURL]
                                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
