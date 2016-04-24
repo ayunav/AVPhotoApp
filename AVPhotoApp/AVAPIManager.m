@@ -10,7 +10,7 @@
 
 #import "AVAPIManager.h"
 
-#define HomeworkURL @"https://hinge-homework.s3.amazonaws.com/client/services/homework.json"
+#define API_DATA_URL @"https://hinge-homework.s3.amazonaws.com/client/services/homework.json"
 
 
 @implementation AVAPIManager
@@ -19,7 +19,7 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    [manager GET:HomeworkURL
+    [manager GET:API_DATA_URL
       parameters:nil
         progress:nil
          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

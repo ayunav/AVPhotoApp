@@ -99,7 +99,13 @@
                             <constraint firstItem="pMc-qZ-GWh" firstAttribute="top" secondItem="Mcb-l2-h44" secondAttribute="bottom" id="yJe-Iv-DQ0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nbP-cH-VJN"/>
+                    <navigationItem key="navigationItem" id="nbP-cH-VJN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="wyL-mo-TJK">
+                            <connections>
+                                <action selector="deleteButtonTapped:" destination="A08-NR-x9G" id="KQ4-t5-f06"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="photoImageView" destination="pMc-qZ-GWh" id="vkW-ge-pEn"/>
                     </connections>

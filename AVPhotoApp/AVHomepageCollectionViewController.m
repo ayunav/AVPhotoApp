@@ -26,17 +26,19 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
+    AVGalleryViewController *galleryVC = [[AVGalleryViewController alloc]init];
+    
     AVPhotoStore *photoStore = [AVPhotoStore sharedPhotoStore];
+    
     [photoStore fetchAndParseApiData:^(NSMutableArray<AVPhoto *> *photos) {
         self.photos = photos;
-
+        galleryVC.imageArray = photos;
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
         });
-
     }];
-
 }
 
 
@@ -108,6 +110,7 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
         AVPhoto *photo = [self.photos objectAtIndex:indexPath.row];
         
         galleryVC.photo = photo;
+        galleryVC.imageArray = self.photos;
     }
     
 }

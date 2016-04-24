@@ -12,8 +12,6 @@
 
 @interface AVPhotoStore : NSObject
 
-// >>>
-#define DATA [AVPhotoStore sharedPhotoStore]
 
 + (AVPhotoStore *)sharedPhotoStore;
 

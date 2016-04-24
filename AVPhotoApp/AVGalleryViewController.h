@@ -14,5 +14,6 @@
 @interface AVGalleryViewController : UIViewController
 
 @property (nonatomic) AVPhoto *photo;
+@property (nonatomic) NSMutableArray *imageArray;
 
 @end
