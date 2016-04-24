@@ -27,7 +27,20 @@
     [super viewDidLoad];
     
     self.photoImageView.clipsToBounds = YES;
-//    [self.photoImageView sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:self.photo.imageURL]
+
+    [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.photo.imageURL]
+                                  completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                      
+                                      self.photoImageView.image = image;
+
+                                      self.currentIndex = [self.imageArray indexOfObject:self.photo]-1;
+                                  }];
+    
+    
+    [self changeImage];
+
+    
+    //    [self.photoImageView sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:self.photo.imageURL]
 //                                                  placeholderImage:nil
 //                                                           options:nil
 //                                                          progress:nil
@@ -38,16 +51,6 @@
 //        NSLog(@"%ld before the set image method", self.currentIndex);
 //    }];
 
-    [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.photo.imageURL]
-                                  completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                                      
-                                      self.photoImageView.image = image;
-                                      self.currentIndex = [self.imageArray indexOfObject:self.photo]-1;
-                                      NSLog(@"index of the object is %ld", [self.imageArray indexOfObject:self.photo]);
-                                  }];
-
-    
-    [self changeImage];
     
 }
 
@@ -59,10 +62,10 @@
 
 - (void)changeImageTimerFired:(NSTimer *)timer {
     
-    if (self.currentIndex <= 0) {
-        self.navigationItem.title = [NSString stringWithFormat:@"0/%ld", self.imageArray.count];
+    if (self.currentIndex <= -1) {
+        self.navigationItem.title = [NSString stringWithFormat:@"%ld/%ld", self.currentIndex + 2,  self.imageArray.count];
     } else {
-        self.navigationItem.title = [NSString stringWithFormat:@"%ld/%ld", self.currentIndex - 1,  self.imageArray.count];
+        self.navigationItem.title = [NSString stringWithFormat:@"%ld/%ld", self.currentIndex + 2,  self.imageArray.count];
     }
     
     if (self.currentIndex == self.imageArray.count - 1) {

@@ -24,9 +24,6 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
     AVGalleryViewController *galleryVC = [[AVGalleryViewController alloc]init];
     
     AVPhotoStore *photoStore = [AVPhotoStore sharedPhotoStore];
