@@ -6,6 +6,8 @@
 //  Copyright © 2016 Ayuna Vogel. All rights reserved.
 //
 
+#import <SDWebImage/UIImageView+WebCache.h>
+
 #import "AVPhotoStore.h"
 #import "AVAPIManager.h"
 
@@ -48,6 +50,13 @@
             photo.imageDescription = imageDescription;
             photo.imageURL = imageURL;
 
+            NSURL *URL = [NSURL URLWithString:photo.imageURL];
+            NSData *imageData = [NSData dataWithContentsOfURL:URL];
+            UIImage *image = [UIImage imageWithData:imageData];
+            
+//            SDImageCache *sharedImageCache = [SDImageCache sharedImageCache];
+//            [sharedImageCache storeImage:image forKey:photo.imageURL]; 
+//             
             [self.photos addObject:photo];
         }
         

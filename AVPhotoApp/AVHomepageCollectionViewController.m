@@ -64,7 +64,18 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
     AVHomepageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     AVPhoto *photo = self.photos[indexPath.row];
-    
+
+//    [cell.photoImageView sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:photo.imageURL]
+//                                                  placeholderImage:nil
+//                                                           options:nil
+//                                                          progress:nil
+//                                                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//                                                             
+//                                                             cell.photoImageView.image = image;
+//                                                             
+//                                                             
+//                                                         }];
+
     [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:photo.imageURL]
                                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                       
