@@ -50,10 +50,10 @@
             photo.imageDescription = imageDescription;
             photo.imageURL = imageURL;
 
-            NSURL *URL = [NSURL URLWithString:photo.imageURL];
-            NSData *imageData = [NSData dataWithContentsOfURL:URL];
-            UIImage *image = [UIImage imageWithData:imageData];
-            
+//            NSURL *URL = [NSURL URLWithString:photo.imageURL];
+//            NSData *imageData = [NSData dataWithContentsOfURL:URL];
+//            UIImage *image = [UIImage imageWithData:imageData];
+//            
 //            SDImageCache *sharedImageCache = [SDImageCache sharedImageCache];
 //            [sharedImageCache storeImage:image forKey:photo.imageURL]; 
 //             
