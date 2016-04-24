@@ -44,11 +44,13 @@
             
             NSString *imageName = dict[@"imageName"];
             NSString *imageDescription = dict[@"imageDescription"];
-            NSString *imageURL = dict[@"imageURL"];
+            NSString *imageURLString = dict[@"imageURL"];
+            NSURL *imageURL = dict[@"imageURL"];
             
             photo.imageName = imageName;
             photo.imageDescription = imageDescription;
-            photo.imageURL = imageURL;
+            photo.imageURLString = imageURLString;
+            photo.imageURL = imageURL; 
 
 //            NSURL *URL = [NSURL URLWithString:photo.imageURL];
 //            NSData *imageData = [NSData dataWithContentsOfURL:URL];
@@ -67,12 +69,32 @@
 }
 
 
-//- (AVPhoto *)getPhotoAtIndex:(int)index {
-//    
-//    // get from photos array
-//    AVPhoto * v;
-//    return v;
-//}
+- (NSInteger)numberOfPhotos {
+    return self.photos.count;
+}
 
+- (NSInteger)indexOfPhoto:(AVPhoto *)photo {
+    NSInteger index = [self.photos indexOfObject:photo];
+    return index; 
+}
+
+
+- (AVPhoto *)getPhotoAtIndex:(NSInteger)index {
+    AVPhoto *photo = [self.photos objectAtIndex:index];
+    return photo;
+}
+
+- (void)removePhotoAtIndex:(NSInteger)index {
+    [self.photos removeObjectAtIndex:index];
+//    should  fire the notification to view controllers, VCs should listen for that notification and reload their data
+}
+
+- (void)notify {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"AVPhotoStoreDidChangeNotification" object:self];
+}
+
+- (void)handleNotification:(NSNotification *)notification {
+    NSLog(@"Got notified: %@", notification);
+}
 
 @end

@@ -26,16 +26,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(photoStoreDidChange:)
+                                                 name:@"AVPhotoStoreDidChangeNotification"
+                                               object:nil];
+    
+    AVPhotoStore *photoStore = [AVPhotoStore sharedPhotoStore];
+    self.currentIndex = [photoStore indexOfPhoto:self.photo];
+    
     self.photoImageView.clipsToBounds = YES;
 
-    [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.photo.imageURL]
+    [self.photoImageView sd_setImageWithURL:self.photo.imageURL
                                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                       
                                       self.photoImageView.image = image;
-
-                                      self.currentIndex = [self.imageArray indexOfObject:self.photo]-1;
                                   }];
-    
     
     [self changeImage];
 
@@ -47,40 +52,43 @@
 //                                                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
 //        self.photoImageView.image = image;
 //        
-//        self.currentIndex = [self.imageArray indexOfObject:self.photo];
-//        NSLog(@"%ld before the set image method", self.currentIndex);
 //    }];
 
     
 }
 
+- (void)photoStoreDidChange:(NSNotification *)notification {
+    // Do something when the photo store changes
+   
+}
+
 - (void)changeImage {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(changeImageTimerFired:) userInfo:nil repeats:YES];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0
+                                                  target:self
+                                                selector:@selector(changeImageTimerFired:)
+                                                userInfo:nil
+                                                 repeats:YES];
+    
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
     [self.timer fire];
 }
 
 - (void)changeImageTimerFired:(NSTimer *)timer {
     
-    if (self.currentIndex <= -1) {
-        self.navigationItem.title = [NSString stringWithFormat:@"%ld/%ld", self.currentIndex + 2,  self.imageArray.count];
-    } else {
-        self.navigationItem.title = [NSString stringWithFormat:@"%ld/%ld", self.currentIndex + 2,  self.imageArray.count];
+    if (self.currentIndex > self.imageArray.count - 1) {
+        self.currentIndex = 0;
     }
+    self.navigationItem.title = [NSString stringWithFormat:@"%ld/%ld", self.currentIndex + 1,  self.imageArray.count];
     
-    if (self.currentIndex == self.imageArray.count - 1) {
-        self.currentIndex = -1;
-    }
     
-    self.currentIndex++;
+    self.photo = [self.imageArray objectAtIndex:self.currentIndex++];
     
-    self.photo = [self.imageArray objectAtIndex:self.currentIndex];
-    
-    [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.photo.imageURL]
+    [self.photoImageView sd_setImageWithURL:self.photo.imageURL
                                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                       
                                       self.photoImageView.image = image;
-                                      self.currentIndex = [self.imageArray indexOfObject:self.photo];
                                   }];
     
 }
@@ -103,8 +111,12 @@
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction *action) {
                                                               
+                                                              AVPhotoStore *photoStore = [AVPhotoStore sharedPhotoStore];
+                                                              NSInteger index = [photoStore indexOfPhoto:self.photo];
+                                                              [photoStore removePhotoAtIndex:index]; 
+                                                              
                                                               SDImageCache *sharedImageCache = [SDImageCache sharedImageCache];
-                                                              [sharedImageCache removeImageForKey:self.photo.imageURL];
+                                                              [sharedImageCache removeImageForKey:self.photo.imageURLString];
                                                               
                                                           }];
 

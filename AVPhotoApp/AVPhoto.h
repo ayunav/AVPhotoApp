@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString *imageName;
 @property (nonatomic, strong) NSString *imageDescription;
-@property (nonatomic, strong) NSString *imageURL;
+@property (nonatomic, strong) NSString *imageURLString;
+@property (nonatomic, strong) NSURL *imageURL;
 
 @end

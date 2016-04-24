@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "AVPhoto.h"
+#import "AVPhotoStore.h"
 
 
 @interface AVGalleryViewController : UIViewController

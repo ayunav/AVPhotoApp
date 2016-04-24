@@ -24,6 +24,11 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(photoStoreDidChange:)
+                                                 name:@"AVPhotoStoreDidChangeNotification"
+                                               object:nil];
+    
     AVGalleryViewController *galleryVC = [[AVGalleryViewController alloc]init];
     
     AVPhotoStore *photoStore = [AVPhotoStore sharedPhotoStore];
@@ -36,6 +41,11 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
             [self.collectionView reloadData];
         });
     }];
+}
+
+
+- (void)photoStoreDidChange:(NSNotification *)notification {
+    [self.collectionView reloadData];
 }
 
 
@@ -73,7 +83,7 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
 //                                                             
 //                                                         }];
 
-    [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:photo.imageURL]
+    [cell.photoImageView sd_setImageWithURL:photo.imageURL
                                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                       
                                       cell.photoImageView.image = image;

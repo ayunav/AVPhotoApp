@@ -17,6 +17,9 @@
 
 - (void)fetchAndParseApiData:(void (^)(NSMutableArray<AVPhoto *> *photos))completion;
 
-//- (AVPhoto *)getPhotoAtIndex:(int)index;
+- (NSInteger)numberOfPhotos;
+- (NSInteger)indexOfPhoto:(AVPhoto *)photo;
+- (AVPhoto *)getPhotoAtIndex:(NSInteger)index;
+- (void)removePhotoAtIndex:(NSInteger)index;
 
 @end
