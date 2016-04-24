@@ -4,7 +4,7 @@ This simple iOS application in Objective-C displays photo images provided by the
 
 The app consists of two views: Homepage View and Gallery View. 
 
-**Thought process/Solution design**  
+**Thought process/Architecture design**  
 
 **Homepage View**    
 
