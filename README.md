@@ -10,7 +10,7 @@ The app consists of two views: Homepage View and Gallery View.
 
 We want to display thumbnails of all the images downloaded from the API endpoint in the Homepage View. The simplest solution for an app this size would be to call a method that pulls and parses API data directly in the Homepage ViewController, then provide the imageURL received from the API to the cellForItemAtIndexPath method to display pulled images in the UITableView or UICollectionView. 
 
-However, in a larger app and as a matter of good coding practices, a data model should be separated from views, and only communicate to it through controller (if we are to follow MVC design pattern). 
+However, in a larger app and as a matter of good coding practices, a data model should be separated from a view, and only communicate to it through a controller (if we are to follow MVC design pattern). 
 
 I represented the data model in this app as AVPhoto class that represents each photo object and has properties for imageURL, imageName, and imageDescription, AVAPIManager class that is responsible for pulling and parsing API data using AFNetworking library, and AVPhotoStore class that is a singleton and is responsible for creating an array of AVPhoto objects and passing that array to the ViewControllers that use that data. 
 
