@@ -11,17 +11,20 @@ Homepage View
 
 Gallery View (Consists of 2 sections)   
 Image View
-* Should display a single image to fit the area.  **_- aspect fill is ok?_** 
+* V ~~Should display a single image to fit the area.~~  **_- aspect fill is ok?_** 
 * V ~~Will initially display the image that was clicked on in the previous step.~~
-* Every two seconds the view should progress to the next image in the list. 
-* After the last image is displayed, starting over with the first image in the list. 
+* V ~~Every two seconds the view should progress to the next image in the list.~~
+* V ~~After the last image is displayed, starting over with the first image in the list.~~
  
   
 Navigation Bar
 * V ~~Back arrow button to return back to the Homepage.~~
-* Displays image’s position in the list (i.e., “5/16”). 
-* Includes a button that removes an image from the list. 
+* V ~~Displays image’s position in the list (i.e., “5/16”).~~
+* Includes a button that removes an image from the list.  
 
 
-* The app should cache data for offline use. 
+**Additional Requirements**
+* Testing 
+* a README with any steps needed to start, and test your app. If there are any other required tools to run the project please specify or include a bundle.
+* The app should cache data for offline use.
 * The app should be attractive if initially started in offline mode. 
