@@ -42,7 +42,7 @@
                                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                       
                                       self.photoImageView.image = image;
-//                                      self.currentIndex = [self.imageArray indexOfObject:self.photo]-1;
+                                      self.currentIndex = [self.imageArray indexOfObject:self.photo]-1;
                                       NSLog(@"index of the object is %ld", [self.imageArray indexOfObject:self.photo]);
                                   }];
 
