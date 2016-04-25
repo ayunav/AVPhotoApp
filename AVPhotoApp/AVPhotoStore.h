@@ -15,7 +15,7 @@
 
 + (AVPhotoStore *)sharedPhotoStore;
 
-- (void)fetchAndParseApiData:(void (^)(NSMutableArray<AVPhoto *> *photos))completion;
+- (void)fetchPhotos:(void (^)(NSMutableArray<AVPhoto *> *photos))completion;
 
 - (NSInteger)numberOfPhotos;
 - (NSInteger)indexOfPhoto:(AVPhoto *)photo;

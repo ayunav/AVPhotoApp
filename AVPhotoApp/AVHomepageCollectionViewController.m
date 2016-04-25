@@ -33,7 +33,7 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
     
     AVPhotoStore *photoStore = [AVPhotoStore sharedPhotoStore];
     
-    [photoStore fetchAndParseApiData:^(NSMutableArray<AVPhoto *> *photos) {
+    [photoStore fetchPhotos:^(NSMutableArray<AVPhoto *> *photos) {
         self.photos = photos;
         galleryVC.imageArray = photos;
         

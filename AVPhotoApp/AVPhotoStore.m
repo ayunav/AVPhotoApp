@@ -29,10 +29,10 @@
         sharedPhotoStore = [[AVPhotoStore alloc] init];
     });
     return sharedPhotoStore;
-
 }
 
-- (void)fetchAndParseApiData:(void (^)(NSMutableArray<AVPhoto *> *photos))completion {
+
+- (void)fetchPhotos:(void (^)(NSMutableArray<AVPhoto *> *photos))completion {
     
     self.photos = [[NSMutableArray alloc] init];
 
