@@ -17,7 +17,6 @@
 @property (nonatomic) NSInteger currentIndex;
 @property (nonatomic) NSTimer *timer;
 
-
 @end
 
 
@@ -46,10 +45,12 @@
 }
 
 
-- (void)photoStoreDidChange:(NSNotification *)notification {
-    // Do something when the photo store changes
-   
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
+
+
+#pragma mark - Timer Methods
 
 - (void)changeImageWithInterval {
     
@@ -80,12 +81,6 @@
                                       
                                       self.photoImageView.image = image;
                                   }];
-    
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 
@@ -100,23 +95,17 @@
                                                                    message:@"Are you sure you want to delete this image?"
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction *action) {
-                                                              
-//                                                              AVPhotoStore *photoStore = [AVPhotoStore sharedPhotoStore];
-//                                                              NSInteger index = [photoStore indexOfPhoto:self.photo];
-//                                                              [photoStore removePhotoAtIndex:index]; 
-//                                                              
-//                                                              SDImageCache *sharedImageCache = [SDImageCache sharedImageCache];
-//                                                              [sharedImageCache removeImageForKey:self.photo.imageURLString];
-                                                              
-                                                          }];
-
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Confirm"
+                                                            style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction *action) {}];
+
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction *action) {}];
 
     [alert addAction:confirmAction];
     [alert addAction:cancelAction];
+    
     [self presentViewController:alert animated:YES completion:nil];
 }
 

@@ -52,26 +52,19 @@
             photo.imageURLString = imageURLString;
             photo.imageURL = imageURL; 
 
-//            NSURL *URL = [NSURL URLWithString:photo.imageURL];
-//            NSData *imageData = [NSData dataWithContentsOfURL:URL];
-//            UIImage *image = [UIImage imageWithData:imageData];
-//            
-//            SDImageCache *sharedImageCache = [SDImageCache sharedImageCache];
-//            [sharedImageCache storeImage:image forKey:photo.imageURL]; 
-//             
             [self.photos addObject:photo];
         }
         
         completion(self.photos);
    
     }];
-   
 }
 
 
 - (NSInteger)numberOfPhotos {
     return self.photos.count;
 }
+
 
 - (NSInteger)indexOfPhoto:(AVPhoto *)photo {
     NSInteger index = [self.photos indexOfObject:photo];
@@ -89,12 +82,15 @@
 //    should  fire the notification to view controllers, VCs should listen for that notification and reload their data
 }
 
+
 - (void)notify {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"AVPhotoStoreDidChangeNotification" object:self];
 }
 
+
 - (void)handleNotification:(NSNotification *)notification {
-    NSLog(@"Got notified: %@", notification);
+
 }
+
 
 @end
