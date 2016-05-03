@@ -11,7 +11,7 @@
 
 @interface AVHomepageCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate,  UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic, copy) NSMutableArray *photos;
+@property (nonatomic) NSMutableArray *photos;
 
 @end
 
@@ -28,14 +28,11 @@ static NSString *const reuseIdentifier = @"AVHomepageCollectionViewCell";
                                                  name:@"AVPhotoStoreDidChangeNotification"
                                                object:nil];
     
-    AVGalleryViewController *galleryVC = [[AVGalleryViewController alloc]init];
-    
     AVPhotoStore *photoStore = [AVPhotoStore sharedPhotoStore];
     
     [photoStore fetchPhotos:^(NSMutableArray<AVPhoto *> *photos) {
         
         self.photos = photos;
-        galleryVC.imageArray = photos;
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
