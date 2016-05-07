@@ -13,7 +13,7 @@ Follow these steps to build and run the app via source code:
 - Build and Run
 - Let me know what you think!
 
-**Thought process/Architecture design**  
+#### Thought process/Architecture design  
 
 **Homepage View**    
 
